@@ -1,6 +1,6 @@
 from centos:latest
 RUN yum update -y
-RUN yum install wget unzip libXext -y
+RUN yum install wget unzip libXext libXt-devel libXmu -y
 RUN mkdir /mcr-install && cd /mcr-install &&  \
     wget -nv http://www.mathworks.com/supportfiles/MCR_Runtime/R2013a/MCR_R2013a_glnxa64_installer.zip && \
     unzip MCR_R2013a_glnxa64_installer.zip && \
